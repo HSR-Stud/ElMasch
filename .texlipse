@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Feb 28 16:33:25 CET 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=ElMasch.tex
+outputFile=ElMasch.pdf
+langSpell=de
+markDer=true
+srcDir=
