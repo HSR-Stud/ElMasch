@@ -1,0 +1,110 @@
+\section{Generelle Eigenschaften el. Maschinen}
+    \subsection{Generelle Formeln von el. Maschinen}
+        \renewcommand{\arraystretch}{2}
+        \begin{tabular}[c]{ | p{5cm} | p{8cm} | p{4cm} | }
+            \hline
+            \textbf{Name} &
+            \textbf{Formel} &
+            \textbf{Einheit} \\
+            \hline
+            Permeabilität &
+            $\mu = \mu_0 \mu_r = \mu_r \cdot 4 \cdot \pi \cdot 10^{-7} \frac{Vs}{Am} = \mu_r \cdot 1.2566 \frac{\mu H}{m}=\frac{B}{H}$ &
+            $\frac{\mu H}{m}=\frac{Vs}{An}$ \\
+            \hline
+            Magn. Flussdichte &
+            $B = \frac{F}{Q \cdot v} = H \cdot \mu \text{\qquad wobei } \vec{v} \perp \vec{B}$ &
+            $\frac{Vs}{m^2} = T$ (Tesla) \\
+            \hline
+            Lorentzkraft &
+            $\vec{F} = Q (\vec{v} \times \vec{B})=I(\vec{l}\times \vec{B}) \hspace{1cm} |\vec{F}| = Q \cdot v \cdot B \cdot \sin\alpha$ &
+            $N$ \\
+            Ampèresches Gesetz &
+            $F=\frac{Q_2 \cdot v_2 \cdot Q_1 \cdot v_1 \cdot \mu}{r^2 \cdot 4\pi}$ &
+            \\
+            \hline
+            Drehmoment von Schleifen &
+            $M_{max} = 2 \cdot F \cdot \frac{d}{2}= F \cdot d = N \cdot B \cdot I \cdot d \cdot l = \frac{P_{Mech}}{2 \pi n_0} $ &
+            Nm; $n_0= Drehzahl$ \\
+            \hline
+            \textbf{3-Finger-Regel:} (rechte Hand) &
+            $F$ = Daumen, $v$ = Zeigefinger, $B$ = Mittelfinger &
+            Bei $Q < 0$ wechselt Richtung von B! \\
+            \hline
+            Magnetische Feldstärke &
+            $\vec{H} = \frac{ \vec{B}}{\mu }$ &
+            $\frac{A}{m}$ \\
+            Magnetische Spannung &
+            $V_{mAB} = \int\limits \vec{H}(s) \cdot \vec{ds}$ ($V_m$ ist abhängig vom Weg) &
+            $A$ \\
+            \hline
+            Durchflutung &
+            $\Theta = \oint\vec{H} \cdot \vec{ds} = \sum\limits_{x=1}^n H_x \cdot l_x = \int\limits \vec{J} \cdot \vec{dA} \vee \underbrace{\sum I_k}_{= N I} = V_m$ &
+            $A$ \\
+            \hline
+            Magnetischer Fluss &
+            $\Phi = \int \vec{B} \vec{dA}$ &
+            $Vs = Wb$ (Weber) \\
+            &
+            $\Phi = B \cdot A \cdot \cos(\gamma)=b \cdot A \cdot (1+Streufluss)$ &
+            B homogen \\
+            \hline
+            \textbf{Maxwell-Gesetz} &
+            $\oint \vec{B} \vec{dA} = 0$ (vgl. Kirchhoff 1 ($\sum I = 0$)) &
+            \\
+            \hline
+            Füllfaktor &
+            $F=\frac{A_{Effektiv Fe}}{A_{Tot}}$ &
+            $[-]$ \\
+            \hline
+            Magn. Widerstand &
+            $R_m = \frac{V_m}{\Phi} = \frac{\Theta}{\Phi} = \frac{l}{\mu A} $ &
+            $\frac{A}{Wb}$ \\
+            \hline
+            Magn. Leitwert &
+            $\Lambda = \frac{1}{R_m} = \frac{\Phi}{V_m}=\frac{\Phi}{\Theta}$ &
+            $\frac{Vs}{A} = H$ (Henry) (Im Formelbuch als $A_L$) \\
+            \hline
+            Verketteter Fluss &
+            $\Psi = \sum \Phi $ (meist $\Psi = N \Phi$) &
+            $[\Psi] = [\Phi] = Vs = Wb$ \\
+            \hline
+            Induktivität &
+            $L = \frac{\Psi}{I}  \qquad \text{Bei idealer Koppl.: } L = \Lambda N^2 = \frac{N^2}{R_m} $ &
+            $[L] = \frac{Vs}{A} = H$ \\
+            \hline
+            Gegeninduktivität &
+            $M = M_{21} = M_{12}$ Bei idealer Koppl. $M = \sqrt{L_1 L_2}$ &
+            vorder Index = Wirkung, \\
+            &
+            $M_{21} = \frac{\Psi_{21}}{I_1}$  (meist $M_{21} = \frac{N_2 \Phi_{21}}{I_1}$) &
+            hinterer = Ursache \\
+            \hline
+            Kopplungsfaktor &
+            $k = \frac{M}{\sqrt{L_1 L_2}}$ Bei idealer Kopplung: $k = 1$ &
+            $[-]$ \\
+            \hline
+            Streukoeffizient &
+            $\sigma = 1 - k^2 = 1 -\frac{M^2}{L_1 L_2}$ Bei idealer Kopplung: $\sigma = 0$ &
+            $[-]$ \\
+            \hline
+            Kreis-r in M-Feld abgelenkte Q &
+            $r = \frac{m_Q \cdot v}{Q \cdot B}$ &
+            $m$, $ m_e = 9,11 \cdot 10^{-31} kg$ \\
+            \hline
+            Spannung &
+            $U = L \cdot \frac{di}{dt}=N \cdot B \cdot l \cdot v$ &
+            V \\
+            \hline
+            Wirkungsgrad &
+            $\eta = \frac{P_2}{P_1}=\frac{abgegebene P}{aufgenommene P}= \frac{P_1 - P_Verluste}{P_1}$ &
+            - \\
+            \hline
+            Verluste: &
+            Hysterese $\sim f \cdot B^2$ \qquad Wirbelstrom $\sim f^2 \cdot B^2$ \qquad Lüfter $ \sim n^3$ \qquad\qquad Erreger $ = I_E ^2 \cdot R_e $ &
+            \\
+            \hline
+        \end{tabular}
+        \renewcommand{\arraystretch}{1.5}	
+        
+        \subsection{Übersicht über Motorenarten}
+        \abb{images/uebersicht_el.png}{11cm}{Prinzipieller Aufbau El. Maschinen}

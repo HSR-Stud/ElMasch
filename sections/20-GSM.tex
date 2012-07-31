@@ -1,0 +1,52 @@
+\section{Gleichstrommaschinen (GSM)}
+    \subsection{Funktionsprinzip}
+    Ein Gleichstrom ist im Prinzip eigendlich nur eine stromdurchflossene Schleife, welche sich in einem Magnetfeld befindet. \\
+    Durch die Lorenzkraft wirkt auf die Schleife ein Drehmoment, welche sie in eine maximal halbe Drehung versetzt. Danach muss man den Schleifenstrom umpolisieren, um die Drehung weiter zu führen. \\
+    \abb{images/GSM_Funktion.png}{14cm}{Funktion eines GSM mit Stromwender}
+    \abb{images/GSM_Ersatz.png}{14cm}{Erstzschema der 4 Schaltungsarten}
+    A1,A2: Ankerwicklung, B1,B2: Wendepolwicklung, C1,C2: Kompensationswicklung, \\
+    D1,D2: Reihenschlusswicklung, E1,E2: Nebenschlusswicklung, F1,F2: Fremderregte Wicklung \\
+    Um ein gleichmässiges Drehmoment erreichen zu können, kann folgende Wicklung angewendet werden\\
+    \begin{minipage}{10cm}
+        \abb{images/GSM_Wicklungen}{9.5cm}{Entstehung eienr Schleifenwicklung}
+    \end{minipage}
+    \begin{minipage}{7cm}
+        \abb{images/GSM_Drehmomentdarstellung}{6.5cm}{Alle Drehmomente zusammen ergeben ein gleichmässiges Drehmoment}
+    \end{minipage}
+    
+    \subsection{Nebenschluss Maschinen}
+        \renewcommand{\arraystretch}{2}
+        \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
+            \hline
+            Drehzahl &
+            $ n= \frac{U}{k_1 \cdot \Phi} - \frac{R_A \cdot M}{k_1 \cdot k_2 \cdot \Phi^2} \sim \frac{U}{I_E} - \frac{M}{I_E^2}$ \\ 
+            &
+            $\Longrightarrow $ bei $I_E$ = 0 und $M$ = 0 $n \rightarrow \infty$ \\
+            \hline
+            Drehmoment &
+            $M=\frac{k_2 \cdot \Phi \cdot U_{Anker}}{R_{Anker}} - \frac{k_1 \cdot k_2 \cdot\phi^2 \cdot n}{R_A} =\frac{P_{mech}}{2\pi n_N}=\frac{U_{iN}I_N}{2\pi n_N}\sim I_E \cdot U_A - I_E ^2 \cdot n$ \\
+            \hline
+            Leistung &
+            $P_{Anker}= U_i \cdot I \pm I^2 \cdot R_A $(+ bei Motor; - bei Generator) \\
+            \hline
+            Anlaufmoment &
+            $M_A = \frac{k_1 \cdot \Phi \cdot U}{R_1}$ \\
+            \hline
+            Leerlaufmoment &
+            $n_0 = \frac{U}{k_1 \cdot \Phi}$ \\
+            \hline
+        \end{tabular}
+        \renewcommand{\arraystretch}{1.5}
+        
+    \subsection{Reihenschluss Maschine}
+        \renewcommand{\arraystretch}{2}
+        \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
+            \hline
+            Drehmoment &
+            $ M=  \frac{U_{Induziert} \cdot I_A}{2 \cdot \pi n_N} = \frac{k_1 \cdot k_E \cdot I_A ^2}{2\cdot \pi n_N}= \frac{k_1 \cdot k_E}{2 \cdot \pi n_N}\cdot(\frac{U}{R_A + R_E + k_1 \cdot k_E \cdot n})^2$ \\
+            \hline
+            Anlaufstrom &
+            $I_A=\frac{U_N}{\sum R_a}=\frac{U_N I_N^2}{U_N I-P_N}$ \\
+            \hline
+        \end{tabular}
+        \renewcommand{\arraystretch}{1.5}
