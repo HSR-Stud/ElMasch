@@ -1,19 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dokumentinformationen %
-%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dokumentinformationen
 \newcommand{\titleinfo}{Elekrische Maschinen - Formelsammlung}
-\newcommand{\authorinfo}{F. Braun, L. Schmid, U. Giger, R. Koller, S.
-Arnold, S. Ferreti}
+\newcommand{\authorinfo}{HSR-Stud (orig. Braun \& Co.)}
 \newcommand{\versioninfo}{$Revision: 975 $ - powered by \LaTeX}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Standard projektübergreifender Header für
-% - Makros 
-% - Farben
-% - Mathematische Operatoren 
-%
-% DORT NUR ERGÄNZEN, NICHTS LÖSCHEN
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+% Header
 \include{header/header}
 
 
@@ -23,19 +13,16 @@ Arnold, S. Ferreti}
 \newcommand{\abb}[3]{
 \begin{center}
 \includegraphics[width=#2]{#1} \\
-Abbildung \arabic{abbildungen}: #3 
-\stepcounter{abbildungen}    
+Abbildung \arabic{abbildungen}: #3
+\stepcounter{abbildungen}
     \end{center}
 }
 
-% Möglichst keine Ergänzungen hier, sondern in header.tex
+% Document
 \begin{document}
-
-
 \input{sections/10-Grundlagen}
 \input{sections/20-GSM}
 \input{sections/30-DSMGrundlagen}
 \input{sections/40-DSM}
 \input{sections/50-DAM}
-
 \end{document}

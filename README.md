@@ -1,6 +1,6 @@
 # ElMasch - Elektrische Maschinen
 
-Verantwortlich: Bernhard Grauer
+Verantwortlich: [Bernhard Grauer](http://github.com/a2er)
 
 ## Prüfung
 
