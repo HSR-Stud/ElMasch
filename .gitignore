@@ -1,3 +1,7 @@
 /ElMasch.pdf
-/ElMasch.synctex.gz
+/ElMasch.synctex*
 /tmp
+*.out
+*.aux
+*.log
+
