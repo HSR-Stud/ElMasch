@@ -1,6 +1,6 @@
 \section{Generelle Eigenschaften el. Maschinen}
     \subsection{Generelle Formeln von el. Maschinen}
-        \renewcommand{\arraystretch}{2}
+        \renewcommand{\arraystretch}{1.8}
         \begin{tabular}[c]{ | p{5cm} | p{8cm} | p{4cm} | }
             \hline
             \textbf{Name} &
@@ -92,7 +92,14 @@
             $m$, $ m_e = 9,11 \cdot 10^{-31} kg$ \\
             \hline
             Spannung &
-            $U = L \cdot \frac{di}{dt}=N \cdot B \cdot l \cdot v$ &
+            \renewcommand{\arraystretch}{1}
+            $U = L \cdot \frac{di}{dt}= \frac{z}{2\cdot A} \cdot B \cdot l \cdot v$ \quad 
+            \begin{array}[t]{ll}
+                z & Anz. EL \\
+                A & Anz. paralleller L.
+            \end{array}
+            \renewcommand{\arraystretch}{1.8}
+            &
             V \\
             \hline
             Wirkungsgrad &
@@ -100,7 +107,7 @@
             - \\
             \hline
             Verluste: &
-            Hysterese $\sim f \cdot B^2$ \qquad Wirbelstrom $\sim f^2 \cdot B^2$ \qquad Lüfter $ \sim n^3$ \qquad\qquad Erreger $ = I_E ^2 \cdot R_e $ &
+            Eisen = Hysterese + Wirbelstrom \qquad Hysterese $\sim f \cdot B^2$ \qquad Wirbelstrom $\sim f^2 \cdot B^2$ \qquad Lüfter $ \sim n^3$ \qquad\qquad Erreger $ = I_E ^2 \cdot R_e $ &
             \\
             \hline
         \end{tabular}
