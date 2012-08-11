@@ -1,5 +1,5 @@
 /ElMasch.pdf
-/ElMasch.synctex*
+*.synctex*
 /tmp
 *.out
 *.aux
