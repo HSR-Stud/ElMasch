@@ -24,18 +24,46 @@
     \subsection{Ersatzschaltbild}
         Da der DAM nach dem Induktionsgesetz funktionniert, kann man ihn gut als Trafo- Ersatzschaltbild darstellen. Der veränderliche Wirkwiderstand (Lastwiderstand) ist die mechanische Last. Das heisst die Verlustleistung über dem Widerstand ist die Mechanische Nutzleistung (minus die Reibungsverluste). Diese ist, wie man sieht von dem Schlupf abhnängig.
         \abb{images/ersatzschaltbild_DAM}{12cm}{Ersatzschaltbild des DAM mit Last}
-        für Dreieckschaltung: \\
-        \begin{tabular}{p{3cm} p{13cm}}
-            Kippmoment: &
-            $M_k= Faktor \cdot M_N$ \\
-            Kloss`sche Gleichung: &
-            $\frac{M}{M_k}=\frac{2 s s_k}{s^2+s_k^2} $ \\
-        \end{tabular} \\
-        \begin{tabular}{p{3cm} p{13cm}}
-            für Sternschaltung: &
-            $M_{Stern}= \frac{M_\Delta}{3}$
-        \end{tabular}
-       
+
+     
+     
+    \subsection{Formeln zur Asynchronmaschine}
+    \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
+    	\hline
+    	Drehfeldzahl $[s^{-1}]$ bzw $[min^{-1}]$ & $n_d=\frac{f}{p}$ bzw
+    	$n_d=\frac{f\cdot 60}{p}$\\
+    	\hline
+    	Schlupf $[-]$ & $s=\frac{n_d-n}{n_d}$\\
+    	\hline
+    	Zugeführte Wirkleistung & $P_{zu}= P_{el}=3\cdot U_1 \cdot I_1 \cdot
+    	\cos\varphi$\\
+    	\hline
+    	Drehfeldleistung & $P_\delta=P_{el}-3\cdot\left(I_1^2\cdot R_1 +
+    	P_{Fe}\right)=3\cdot\frac{R_2^\prime}{s}\cdot I_2^{\prime 2}$\\
+    	\hline
+    	Wellenleistung ohne Reibung & $P_{mech}=P_\delta-3I_2^{\prime 2}\cdot
+    	R_2^\prime=(1-s)\cdot P_\delta$\\
+    	\hline
+    	Läuferverlustleistung & $P_{v2}=3\cdot R_2^\prime\cdot I_2^{\prime
+    	2}=s\cdot P_\delta$\\
+    	\hline
+    	Drehmoment & $M=\frac{P_{mech}}{2\cdot\pi\cdot
+    	n}=\frac{P_\delta}{2\cdot\pi\cdot n_0}$\\
+    	\hline
+    	Kippmoment & $M_{kipp}=\frac{3\cdot U_I^2}{4\pi\cdot
+    	n_1}\cdot\frac{1-\sigma}{R_1(1-\sigma)+\sqrt{R_1^2+X_1^2}}\approx\frac{3\cdot
+    	U_1^2}{4\pi\cdot n_1 \cdot X_\sigma}$\\
+    	\hline
+    	Klosssche Gleichung &
+    	$\frac{M}{M_k}=\frac{2}{\left(\frac{s}{s_{kipp}}+\frac{s_{kipp}}{s}\right)}=\frac{2
+    	s s_k}{s^2+s_k^2} $\\
+    	\hline
+    	Kippmoment Dreieckschaltung& $M_k= Faktor \cdot M_N$\\
+    	\hline
+    	für Sternschaltung & $M_{Stern}= \frac{M_\Delta}{3}$\\
+    	\hline
+    \end{tabular}
+    
     \subsection{Drehmomentkennlinie}
         \begin{minipage}{5cm}
             \abb{images/Drehmomentkenn_DAM.png}{5cm}{$M = f(s)$}   
