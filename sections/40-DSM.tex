@@ -27,6 +27,34 @@
         \begin{minipage}{8cm}
             \abb{images/Zeigerdiagram.png}{6cm}{Betriebszustände einer DSM}
         \end{minipage}\\
+        
+    \subsection{Allgemeine Formeln}
+    \begin{tabular}[c]{ | p{7cm} | p{8cm} |}
+    	\hline
+    	Drehfeldzahl $[s^{-1}]$ bzw $[min^{-1}]$ & $n_d=\frac{f}{p}$ bzw
+    	$n_d=\frac{f\cdot 60}{p}$\\
+    	\hline
+    	Schlupf $[-]$ & $s=\frac{n_d-n}{n_d}$\\
+    	\hline
+    	Strang- bzw. Phasenspannung &
+    	$\underline{U}_{kl}=\underline{U}_p+jX_d\cdot\underline{I}$\\
+    	\hline
+    	Leerlauferregerstrom für Nennspannung & $I_{E0N}$\\
+    	\hline
+    	Lastabhängiger Erregerstrom & $\frac{I_E}{I_{E0N}}=\frac{U_p}{U_{Kl}}$\\
+    	\hline
+    	Polradspannung & $U_p=\sqrt{U_{Kl}^2+X_d^2\cdot I^2+2\cdot U_{Kl}\cdot
+    	X_d \cdot I\cdot sin\phi}$\\
+    	\hline
+    	Polradwinkel gem. ESB & $\vartheta$\\
+    	\hline
+    	Wirkleistung des DSG & $P_{el}=3\cdot
+    	U_{Kl}\cdot\frac{U_p}{X_d}\sin\vartheta$\\
+    	\hline
+    	Antriebsmoment des DSG & $M_{Welle}=\frac{3\cdot60}{2\pi\cdot n \cdot
+    	\eta}\cdot U_{Kl}\cdot\frac{U_p}{X_d}\cdot\sin\vartheta$\\
+    	\hline
+    \end{tabular}
 
     \subsection{Betriebsverhalten}
         \begin{tabular}{l l l l}
