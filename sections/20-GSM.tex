@@ -15,6 +15,39 @@
         \abb{images/GSM_Drehmomentdarstellung}{6.5cm}{Alle Drehmomente zusammen ergeben ein gleichmässiges Drehmoment}
     \end{minipage}
     
+    \subsection{Grundgleichungen}
+    \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
+    	\hline
+    	Umfangsgeschwindigkeit & $v_u=\omega\cdot R = 2\pi\cdot n \cdot
+    	R=\frac{2\pi\cdot f \cdot R}{p}=2\cdot f \cdot \tau_p$\\
+    	\hline
+    	Teilspannung eines Leiters & $U_{iL}=2\cdot \tau_p \cdot f \cdot l \cdot
+    	B_m= 2\cdot f\cdot \Phi = 2\cdot p \cdot n \cdot \Phi$\\
+    	\hline
+    	Gesamtspannung & $U_i=\frac{z}{2\cdot a}\cdot U_{iL}=\frac{z}{a}\cdot \cdot
+    	p \cdot n \cdot \Phi=k_1\cdot\Phi\cdot n$\\
+    	\hline
+    	Ankerspannung & $U_a=R_a\cdot I_a + L_a\frac{dI_a}{dt}+U_i$\\
+    	\hline
+    	Erregerspannung & $U_e=R_e\cdot I_e + L_e\frac{dI_e}{dt}$\\
+    	\hline
+    	Induzierte Spannung & $U_i = k_1\cdot \Phi \cdot \omega_{mech} \quad k_1
+    	= Maschinenkonstante$\\
+    	\hline
+    	& $M_{el}=M_{Welle}+M_{Reibung}+J\cdot\frac{d\omega_{mech}}{dt}=k_1\cdot
+    	\Phi\dot I_a$\\
+    	\hline
+    	& $\Phi = \frac{L_e}{N_e}\cdot I_e$\\
+    	\hline
+    	Ideale Luftspaltleistung & $P_{Luft}=U_i\cdot I_A$\\
+    	\hline
+    	Mech. Leistung an der Welle &
+    	$P_{Welle}=P_{Luft}-V_{Fe}-V_{Reib}-V_{zus}$\\
+    	\hline
+    	
+    
+    \end{tabular}
+    
     \subsection{Nebenschluss Maschinen}
         \renewcommand{\arraystretch}{2}
         \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
@@ -35,6 +68,13 @@
             \hline
             Leerlaufmoment &
             $n_0 = \frac{U}{k_1 \cdot \Phi}$ \\
+            \hline
+            & $\Phi=\frac{L_e}{N_e}\cdot\frac{U_a}{R_e+R_v}$\\
+            \hline
+            Leerlaufdrehzahl &
+            $\omega_m=\frac{N_e\left(R_E+R_V\right)}{k_1\cdot
+            L_e}-\frac{R_a\left(R_e+R_V\right)^2N_e^2}{\left(k_1L_eU_a\right)^2}\cdot
+            M_{el}$\\
             \hline
         \end{tabular}
         \renewcommand{\arraystretch}{1.5}
