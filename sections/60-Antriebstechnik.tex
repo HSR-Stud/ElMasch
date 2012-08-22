@@ -1,0 +1,104 @@
+\section{Antriebstechnik}
+
+\subsection{Gradlinige Bewegungen}
+\begin{tabular}[c]{ | p{5cm} | p{8cm} | p{4cm} | }
+	\hline
+	Kraft & $F=m\cdot a=m\cdot\frac{dv}{dt}$ & N \\
+	\hline
+	Leistung & $P=v\cdot F$ & W \\
+	\hline
+	Kinetische Energie & $W_{kin}=\frac{1}{2}\cdot m \cdot v^2$ & Ws \\
+	\hline
+\end{tabular}
+
+\subsection{Rotierende Bewegungen}
+\begin{tabular}[c]{ | p{5cm} | p{8cm} | p{4cm} | }
+	\hline
+	Winkelgeschwindigkeit & $\omega = 2\cdot\pi\cdot n$ & $s^{-1}$ \\
+	\hline
+	Geschwindigkeit & $v=\omega \cdot r = 2 \cdot\pi\cdot n \cdot r$ &
+	$\frac{m}{s}$
+	\\
+	\hline
+	Leistung & $P=\frac{M}{r}\cdot 2 \cdot\pi\cdot n \cdot r = 2\cdot\pi\cdot n
+	\cdot M = \omega \cdot M$ & W \\
+	\hline
+	Kinetische Energie & $W_{kin}=\frac{1}{2}\cdot J \cdot\omega^2$ & Ws \\
+	\hline
+\end{tabular}
+
+\subsection{Massenträgheit und Beschleunigung}
+\begin{tabular}[c]{ | p{5cm} | p{8cm} | p{4cm} | }
+	\hline
+	Trägheitsmoment & $J=\int\limits_{0}^mr^2\cdot dm$ & $kgm^2$ \\
+	\hline
+	Beschleunigungsmoment & $M_B=J\cdot\alpha = J\cdot\frac{d\omega}{dt}=J\cdot
+	2\pi\cdot\frac{dn}{dt}$ & Nm\\
+	\hline
+	Energieaufwand für die Beschleunigung & $W=\frac{1}{2}\cdot J \cdot
+	\left(\omega_2^2-\omega_1^2\right) = \frac{1}{2}\cdot
+	m\cdot\left(v_2^2-v_1^2\right)$ & Ws\\
+	\hline
+\end{tabular}
+
+\subsection{Umrechnen der Bewegungsgrössen auf die Motorwelle}
+\begin{tabular}[c]{ | p{14cm} | p{3.5cm} | }
+	\hline
+	Übersetzungsverhältnis des Getriebes & $i=\frac{n_1}{n_2}$\\
+	\hline
+	Moment der Lastmaschine, auf die Motorwelle umgerechnet &
+	$M_1=\frac{M_2}{\eta_G}\cdot\frac{n_2}{n_1}$\\
+	\hline
+	Trägheitsmoment der Lastmaschine, auf die Motorwelle umgerechnet &
+	$J_1=\frac{J_2}{\eta_G\cdot i^2}$\\
+	\hline
+	Ersatzmoment einer Masse m, die sich gradlinig mit v bewegt, bezogen auf eine
+	Welle mit $\omega$ & $M_{ers}=\frac{F\cdot v}{\omega}=F\cdot r_{ers}$\\
+	\hline
+	Ersatzträgheitsmoment einer Masse m & $J_{ers}=m\cdot r_{ers}^2$ \\
+	\hline
+\end{tabular}
+
+\subsection{Beschleunigungsvorgänge}
+\begin{tabular}[c]{ | p{9cm} | p{8.5cm} | }
+	\hline
+	Dynamisches Grundgesetz der Antriebstechnik & $J\cdot\frac{d\omega}{dt}= \sum
+	M(\omega)=M_{Mot(\omega)}+M_{Last(\omega)}$\\
+	\hline
+	Stationärer Lastfall & $\sum M=0=M_{Mot}+M_{Last}$\\
+	\hline
+	Zeitbedarf für eine Drehzahlerhöhung von $\omega_1$ auf $\omega_2$ &
+	$t_{an}=J\int\limits_{\omega_1}^{\omega_2}\frac{1}{M_B}\cdot d\omega$ \\
+	\hline
+	Bei konstantem Beschleunigungsmoment &
+	$t_{an}=\frac{J}{M_b}\cdot\left(\omega_2-\omega_1\right)$ \\
+	\hline
+	Winkelgeschwindigkeit entsprechend Nenndrehzahl $n_N$ & $\omega_N$\\
+	\hline
+	Bei linear abnehmendem Beschleunigungsmoment &
+	$t_{an}=\frac{J}{M_{B_{max}}}\cdot\omega_N\cdot\int\limits_{\omega_1}^{\omega_2}\frac{1}{\omega_N-\omega}\cdot
+	d\omega$ \\
+	\hline
+	Für $\omega_1 < \omega_2 < \omega_N$ &
+	$t_{12}=\frac{J}{M_{B_{max}}}\cdot\omega_N\cdot
+	ln\frac{\omega_N-\omega_1}{\omega_N-\omega_2}$ \\
+	\hline
+	Anlaufkonstante & $T_an$\\
+	\hline
+	Stillstand zur Nenndrehzahl $\omega_N$ & $t{an}\approx 5\cdot T_{an}\approx
+	5\cdot\omega_N\cdot\frac{J}{M_{B_{max}}}$\\
+	\hline
+\end{tabular}
+
+\subsection{Stabilität von Arbeitspunkten}
+Der stationäre Betriebspunkt eines Antriebs ist durch den Schnittpunkt der
+M-n-Kennlinien von Motor und Antriebsmaschine gekennzeichnet\\
+\begin{tabular}{ll}
+$M=-M_W$\\
+$M$ & Motormoment\\
+$M_W$ & Lastmoment\\
+\end{tabular}\\
+Ein Arbeitspunkt ist stabil, wenn bei einer virtuellen Drehzahlerhöhung das
+Widerstandsmoment $M_W$ grösser ist als das Motormoment $M$, d.h. einer
+Drehzahlerhöhung entgegenwirkt\\
+$$\frac{\Delta M- \Delta M_W}{\Delta \omega}<0$$\\
