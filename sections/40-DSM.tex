@@ -12,7 +12,7 @@
         \end{description}
 
     \subsection{Ersatzschaltbild}
-        \begin{minipage}{11cm}
+        %\begin{minipage}{11cm}
             \abb{images/Ersatz_DSM.png}{8cm}{Ersatzschaltung DSM}    
             Es gibt 2 Unterteilungen: \\
             \begin{description}
@@ -23,11 +23,22 @@
                 Betrieb} gibt der DSM Blindleistung ab. Bei \textbf{Untererregung} oder auch \textbf{induktiven Betrieb}
                 nimmt er auf.
             \end{description}
-        \end{minipage}
-        \begin{minipage}{8cm}
-            \abb{images/Zeigerdiagram.png}{6cm}{Betriebszustände einer DSM}
-        \end{minipage}\\
-        
+        %\end{minipage}
+        %\begin{minipage}{8cm}
+        %    \abb{images/Zeigerdiagram.png}{6cm}{Betriebszustände einer DSM}
+        %\end{minipage}\\
+        \begin{tabular}{lll}
+        	& Übererregung & Untererregung \\
+        Motor & & \\
+        &
+        \input{./tikz/DSM/ZeigerMotorUeber.tex} &
+        \input{./tikz/DSM/ZeigerMotorUnter.tex}\\
+        Generator & & \\
+        &
+        \input{./tikz/DSM/ZeigerGeneratorUeber.tex} &
+        \input{./tikz/DSM/ZeigerGeneratorUnter.tex}\\
+        \end{tabular}
+     
     \subsection{Allgemeine Formeln}
     \begin{tabular}[c]{ | p{7cm} | p{8cm} |}
     	\hline
