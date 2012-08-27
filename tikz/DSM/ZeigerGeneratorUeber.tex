@@ -1,0 +1,21 @@
+\begin{tikzpicture}[->,thick]
+\coordinate (null) at (0,0) {};
+\coordinate (I) at (-1,-1) {};
+\coordinate (Ukl) at (0,4) {};
+\coordinate (Up) at (-2,4.8) {};
+\coordinate (Ie) at (2,0.5) {};
+\coordinate (Iu) at (1.5,0) {};
+
+\draw (null) -- (I) node [anchor=south] {$\underline{I}$};
+
+\draw (null) -- (Ukl) node [anchor=north west] {$\underline{U}_{kl}$};
+\draw (null) -- (-0.5,4.2) node [anchor=north east] {$\underline{U}_I$};
+\draw (null) -- (Up) node [anchor=north east] {$\underline{U}_P$};
+\draw (Up) -- (Ukl) node [anchor=south] {$jX_d\cdot\underline{I}$};
+
+\draw (null) -- (Ie) node [anchor=south] {$\underline{I}_E$};
+\draw (Ie) -- (Iu) node [anchor=west] {$\underline{I}^\prime$};
+\draw (null) -- (Iu) node [anchor=north east] {$\underline{I}_\mu$};
+
+\draw (0,2) arc [radius=2, start angle=90, delta angle=22.5] node [anchor=west] {$\vartheta$};
+\end{tikzpicture}
