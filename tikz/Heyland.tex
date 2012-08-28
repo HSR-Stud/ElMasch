@@ -1,0 +1,130 @@
+
+\begin{tikzpicture}
+
+	% Bekante Punkte
+	\coordinate (pI0) at (1.7,0.4); % I_0
+	\coordinate (pPa) at (19:20); % P_A
+	\coordinate (pVS) at (0,2);     % Verlust im Stator
+	\coordinate (pPosVerlust) at (15,0); % Position an der der Verlust eingetragen wird
+	\def\direction{55}; %Winkel von I_N
+	
+	%Errechnete Punkte
+	\coordinate (dirpIn) at ({cos(\direction)},1);
+	
+	% Koordinatensystem
+ 	\draw[->] (-1,0) -- ++(23,0) node[below] {$-j$};
+  	\draw[->] (0,-1) -- ++(0,17) node[right] {$re$};
+  	\path[name path=abszisse] (0,0) -- +(23,0);
+  	
+  	\clip (-1,-1) rectangle (23,17.5);  % Ganzer Bereich, damit keine Linien weiter gehen.
+  	
+  	\draw[color=blue, ->] (0,0) -- +(0,10) node[left] {$U_{ph}$};
+  
+  	% PA und Leistungsline
+  	\draw[->] (0,0) -- (pPa) node[above, left=5] {$I_K$};
+  	\node at (pPa) [right=0.2cm] {$P_A \quad s=1$};
+  	\draw[name path=leistungslinie] (pI0) -- (pPa) node[below, near start, sloped] {Leistungslinie};
+  	
+  	\draw[color=red, ->] (0,0) -- +(pI0) node[below=0.5cm, midway] {$I_0$};
+  	\draw[dashed, name path=eisenverlustlinie] (pI0) -- +(20,0);
+  	
+
+  	
+  	% Mittelsenkrechte auf der Leistungslinie
+  	\begin{scope}
+  		\coordinate (pMSLL) at ($ (pI0)!0.5!(pPa) $);
+  		\coordinate (pMSLL2) at ($ (pMSLL)!10cm!90:(pI0) $);
+  		\path[name path=mittelsenkrechte] (pMSLL) -- (pMSLL2);
+  		\path [name intersections={of= mittelsenkrechte and eisenverlustlinie}] (intersection-1) coordinate (pM);
+  		\draw[dashed, shorten >=-10pt] (pMSLL) -- (pM);
+  		\node[draw, blue, name path global=kreis] at (pM) [circle through=(pI0)] {};
+  		\path (pM) node[below] {$M$};
+  		\draw ($(pMSLL)!3mm!(pMSLL2)$) to[bend right=45] ($(pMSLL)!3mm!(pPa)$);
+  		\path ($(pMSLL)!1.4mm!(pMSLL2)!1.4mm!(pPa)$) node {.};
+	\end{scope}
+	
+	% P_infty berechnen und zeichenen
+	\begin{scope}
+		\coordinate (pSchnitt) at ($ (pI0) + (pVS) + (pPosVerlust) $);
+		\path[name path global= momentlinie] (pI0) -- ($(pI0)!2!(pSchnitt)$);
+		\path[name intersections={of= kreis and momentlinie, name=s}] (s-1) coordinate (pPinf);
+		\draw[->] (pI0) -- (pPinf) node[near start, below, sloped] {Momentenlinie};
+		\draw[dashed] (pM) -- (pPinf);
+		\path (pPinf) node[right=0.2cm] {$P_\infty \quad s=\infty$};		
+	\end{scope}
+	
+	% Senkrechte auf MP_infty
+	\begin{scope}
+		\coordinate (pMMP) at ($ (pM)!0.67!(pPinf) $);
+  		\coordinate (pMMP2) at ($ (pMMP)!16cm!90:(pPinf) $);
+  		\draw[shorten < = -10cm, ->, name path=skala] (pMMP) -- (pMMP2);
+  		\path[name intersections={of= skala and momentlinie, name=sk0}] (sk0-1) coordinate (pSkala0);
+  		\draw ($(pMMP)!-3mm!(pMMP2)$) to[bend right=45] ($(pMMP)!3mm!(pPinf)$);
+  		\path ($(pMMP)!-1.4mm!(pMMP2)!1.4mm!(pPinf)$) node {.};
+	\end{scope}
+	
+	% Verlängerung von P_inf-Pa
+	\begin{scope}		
+		\draw[dashed, name path=PinfPa] (pPinf) -- ($(pPinf)!5!(pPa)$);
+		\path[name intersections={of=PinfPa and skala, name=sk1}] (sk1-1) coordinate (pSkala1);	
+	\end{scope}
+	
+	% Skala
+	\begin{scope}
+		\foreach \x in {0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0} {
+			\draw ($(pSkala0)!\x!(pSkala1)$) node[left=2] {\x};
+			\draw ($(pSkala0)!\x!(pSkala1)- (-.1,0)$) -- ($(pSkala0)!\x!(pSkala1)- (.1,0)$);
+		}
+	\end{scope}
+	
+	% M - S_k
+	\begin{scope}
+		\coordinate (pSSK) at ($(pI0)!(pM)!(pPinf)$);
+		\path[name path=skline] (pM) -- ($(pM)!17cm!(pSSK)$);
+		\path[name intersections={of= kreis and skline, name=intersSk}] (intersSk-1) coordinate (pSk);
+		\draw[dashed] (pM) -- (pSk) node[above] {$S_K$};
+		\draw ($(pSSK)!3mm!(pM)$) to[bend right=45] ($(pSSK)!3mm!(pPinf)$);
+  		\path ($(pSSK)!1.4mm!(pM)!1.4mm!(pPinf)$) node {.};
+	\end{scope}
+	
+	% Beschriftung P_zu0
+	\coordinate (pPzu00) at ($ (pI0)+ (4,0) $);
+	\coordinate (pPzu01) at ($ (0,0)!(pPzu00)!(15,0) $);
+	\draw[<->] (pPzu00) -- (pPzu01) node[midway, right] {$P_{zu_0}$};
+	
+	% Beschriftung M_K
+	\path[name path=mkbeschriftung] (pSk) -- +(0,-20);
+	\draw[name intersections={of= mkbeschriftung and momentlinie, name=intersMk}, <->] (pSk) -- (intersMk-1) node[midway, left] {$M_K$};
+
+	% I_N
+	\begin{scope}
+		\coordinate (pINN) at (dirpIn);%($(pI0)!(pM)!(pPinf)$);
+		\path[name path=inline] (0,0) -- ($(0,0)!17cm!(pINN)$);
+		\path[name intersections={of= kreis and inline, name=intersIn}] (intersIn-1) coordinate (pIN);
+		\draw (0,0) -- (pIN) node[left] {$I_N$};
+	\end{scope}
+	\draw [->] (0,3) arc (90:{\direction+5}:3) node[below left] {$\varphi$};
+	% Beschriftung Pmech
+	\path[name path=pmech] (pIN) -- +(0,-20);
+	\path[name intersections={of= pmech and leistungslinie, name=intersPmech}] (intersPmech-1) coordinate (pPmech);
+	\draw [<->] (pIN) -- (pPmech) node[midway, right] {$P_{mech}$};
+	%Beschriftung PV
+	\path[name path=pv] (pPmech) -- +(0,-20);
+	\path[name intersections={of= pv and abszisse, name=intersPv}] (intersPv-1) coordinate (pPv);
+	\draw [<->] (pPmech) -- (pPv) node[above right] {$P_V$};
+	
+  	%Senkrechte von PA herunter
+  	\path[name path=pVRotor] (pPa) -- +(0,-20);
+	\path[name intersections={of= pVRotor and momentlinie, name=intersPVRotor}] (intersPVRotor-1) coordinate (pPVRotor);
+	\draw [<->] (pPa) -- (pPVRotor) node[midway, right] {Stromwärmeverlust Rotor};
+  	%Senkrechte von PA herunter Teil 2
+  	\path[name path=pVStator] (pPVRotor) -- +(0,-20);
+	\path[name intersections={of= pVStator and eisenverlustlinie, name=intersPVStator}] (intersPVStator-1) coordinate (pPVStator);
+	\draw [<->] (pPVRotor) -- (pPVStator) node[midway, right] {Stromwärmeverlust Stator};
+	 %Senkrechte von PA herunter Teil 3
+  	\path[name path=pVEisen] (pPVStator) -- +(0,-20);
+	\path[name intersections={of= pVEisen and abszisse, name=intersPVEisen}] (intersPVEisen-1) coordinate (pPVEisen);
+	\draw [<->] (pPVStator) -- (pPVEisen) node[midway, right] {Eisenverluste};
+	
+	
+\end{tikzpicture}
