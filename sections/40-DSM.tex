@@ -73,31 +73,38 @@
     \end{tabular}
 
     \subsection{Betriebsverhalten}
-        \begin{tabular}{l l l l}
-            Leerlauf &
-            \begin{minipage}{5cm}
-                \abb{images/Leerlaufkennlinie.png}{4cm}{Im Betriebspunkt liniarisierte Leerlaufgerade}
-            \end{minipage} &
-            $I_E = \frac{U_P \cdot \sqrt{3} \cdot I_{E0N}}{U_N}$ &
-            \begin{minipage}{9cm}
-                Die Formel ist für die liniarisierte Gerade \\
-                $I_E: $Erregerstrom \\
-                $U_P: $verkettete Nennspannung des DS- Netzes\\
-                $I_{E0N}:$Leerlauferregerstrom für Nennspannung
-            \end{minipage} \\
-        \end{tabular} \\
-        \\
-        \begin{tabular}{l l l l}
-            Kurzschluss &
-            \begin{minipage}{5cm}
-                \abb{images/Kurzschlussgerade.png}{4cm}{Kurzschlussgerade}
-            \end{minipage} &
-            $X_d=\frac{U_P}{I_{K0}}$ &
-            \begin{minipage}{9cm}
-                Gilt unter Vernachlässigung des Wicklungswiderstand \\
-                Die Kurzschlussgerade ist liniar
-            \end{minipage} \\
-        \end{tabular}
+    	Siehe Abbildung \ref{fig:betriebsverhalten}
+    	\begin{figure}[h!]
+	    	\centering
+	    	\begin{subfigure}[t]{0.45\textwidth}
+	    		\centering
+	    		\includegraphics[width=4.5cm]{images/Leerlaufkennlinie.png}
+	    		\caption{Im Betriebspunkt linearisierte Leerlaufgerade}
+	    	\end{subfigure}
+	    	\begin{subfigure}[t]{0.45\textwidth}
+	    		\centering
+	    		\includegraphics[width=4.5cm]{images/Kurzschlussgerade.png}
+	    		\caption{Kurzschlussgerade}
+	        \end{subfigure}
+	        \caption{Kurven in den Verschiedenen Betriebsarten}
+	        \label{fig:betriebsverhalten}
+    	\end{figure}
+    	
+    	\begin{tabular}{ l l p{9cm} }
+    		\textbf{Leerlauf}
+    		& $I_E = \frac{U_P \cdot \sqrt{3} \cdot I_{E0N}}{U_N}$ 
+    		& Die Formel ist für die liniarisierte Gerade \newline
+    		  $I_E: $Erregerstrom \newline
+    		  $U_P: $verkettete Nennspannung des DS- Netzes\newline
+    		  $I_{E0N}:$Leerlauferregerstrom für Nennspannung
+    		\\
+    		\textbf{Kurzschluss} 
+    		& $X_d=\frac{U_P}{I_{K0}}$
+    		& Gilt unter Vernachlässigung des Wicklungswiderstand \newline
+    		  Die Kurzschlussgerade ist linear
+    		\\
+    	\end{tabular} 
+    	
 
     \subsubsection{Inselbetrieb}
         \begin{minipage}{10cm}
