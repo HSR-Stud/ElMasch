@@ -42,10 +42,10 @@
     	Induzierte Spannung & $U_i = k_1\cdot \Phi \cdot \omega_{mech} = B\cdot l
     	\cdot v \quad k_1 = Maschinenkonstante$\\
     	\hline
-    	& $M_{el}=M_{Welle}+M_{Reibung}+J\cdot\frac{d\omega_{mech}}{dt}=k_1\cdot
+    	Elektrisch verursachtes Drehmoment & $M_{el}=M_{Welle}+M_{Reibung}+J\cdot\frac{d\omega_{mech}}{dt}=k_1\cdot
     	\Phi\cdot I_a$\\
     	\hline
-    	& $\Phi = \frac{L_e}{N_e}\cdot I_e$\\
+    	Erregerfluss & $\Phi = \frac{L_e}{N_e}\cdot I_e$\\
     	\hline
     	Ideale Luftspaltleistung & 
     		$P_{Luft}=U_i\cdot I_A = M_{Luft} \cdot \omega $\\
@@ -58,14 +58,19 @@
     	\hline
     \end{tabular}
     
-    \subsection{Nebenschluss Maschinen}
+    	
+    
+    \subsection{Nebenschlusmaschinen}
+    	Nebenschlussmaschinen am starren Netz unterscheiden sich im Betriebsverhalten nicht von fremderregten Maschinen.
+    	
+    	
         \renewcommand{\arraystretch}{2}
-        \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
+        \begin{tabular}[c]{ | p{6cm} | p{11cm} |}
             \hline
             Drehzahl &
-            $ n= \frac{U}{k_1 \cdot \Phi} - \frac{R_A \cdot M}{k_1 \cdot k_2 \cdot \Phi^2} \sim \frac{U}{I_E} - \frac{M}{I_E^2}$ \\ 
-            &
-            $\Longrightarrow $ bei $I_E$ = 0 und $M$ = 0 $n \rightarrow \infty$ \\
+            $ n= \frac{U_A}{k_1 \cdot \Phi} - \frac{R_A \cdot M}{k_1 \cdot k_2 \cdot \Phi^2} \sim \frac{U_A}{I_E} - \frac{M}{I_E^2}$ \newline
+            $\Longrightarrow $ bei $I_E$ = 0 und $M$ = 0 $n \rightarrow \infty$ \newline 
+            $k_1$, $k_2$ sind Maschinenkonstanten \\
             \hline
             Drehmoment &
             $M=\frac{k_2 \cdot \Phi \cdot U_{Anker}}{R_{Anker}} - \frac{k_1 \cdot k_2 \cdot\phi^2 \cdot n}{R_A} =\frac{P_{mech}}{2\pi n_N}=\frac{U_{iN}I_N}{2\pi n_N}\sim I_E \cdot U_A - I_E ^2 \cdot n$
@@ -78,9 +83,10 @@
             $M_A = \frac{k_1 \cdot \Phi \cdot U}{R_1}$ \\
             \hline
             Leerlaufmoment &
-            $n_0 = \frac{U}{k_1 \cdot \Phi}$ \\
+            $n_0 = \frac{U_A}{k_1 \cdot \Phi}$ \\
             \hline
-            & $\Phi=\frac{L_e}{N_e}\cdot\frac{U_a}{R_e+R_v}$\\
+            Magnetischer Fluss des Hauptfeldes & 
+            $\Phi=\frac{L_e}{N_e}\cdot\frac{U_a}{R_e+R_v}$\\
             \hline
             Leerlaufdrehzahl &
             $\omega_m=\frac{N_e\left(R_E+R_V\right)}{k_1\cdot
