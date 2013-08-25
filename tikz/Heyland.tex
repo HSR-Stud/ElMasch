@@ -22,6 +22,7 @@
   
   	% PA und Leistungsline
   	\draw[->] (0,0) -- (pPa) node[above, left=5] {$I_K$};
+  	\node at (pPa) [right=1.2cm, above = 1.2] {Anlaufpunkt};
   	\node at (pPa) [right=0.2cm] {$P_A \quad s=1$};
   	\draw[name path=leistungslinie] (pI0) -- (pPa) node[below, near start, sloped] {Leistungslinie};
   	
@@ -50,6 +51,7 @@
 		\path[name intersections={of= kreis and momentlinie, name=s}] (s-1) coordinate (pPinf);
 		\draw[->] (pI0) -- (pPinf) node[near start, below, sloped] {Momentenlinie};
 		\draw[dashed] (pM) -- (pPinf);
+		\path (pPinf) node[above = 0.4cm, right=0.2cm] {Bremspunkt};
 		\path (pPinf) node[right=0.2cm] {$P_\infty \quad s=\infty$};		
 	\end{scope}
 	
@@ -82,6 +84,7 @@
 		\coordinate (pSSK) at ($(pI0)!(pM)!(pPinf)$);
 		\path[name path=skline] (pM) -- ($(pM)!17cm!(pSSK)$);
 		\path[name intersections={of= kreis and skline, name=intersSk}] (intersSk-1) coordinate (pSk);
+		\draw[dashed] (pM) -- (pSk) node[above=0.5cm] {Kipppunkt};
 		\draw[dashed] (pM) -- (pSk) node[above] {$S_K$};
 		\draw ($(pSSK)!3mm!(pM)$) to[bend right=45] ($(pSSK)!3mm!(pPinf)$);
   		\path ($(pSSK)!1.4mm!(pM)!1.4mm!(pPinf)$) node {.};
@@ -103,7 +106,7 @@
 		\path[name intersections={of= kreis and inline, name=intersIn}] (intersIn-1) coordinate (pIN);
 		\draw (0,0) -- (pIN) node[left] {$I_N$};
 	\end{scope}
-	\draw [->] (0,3) arc (90:{\direction+5}:3) node[below left] {$\varphi$};
+	\draw [->] (0,3) arc (90:{\direction+5}:3) node[below left, below = 0.5cm, left = 0.7cm] {$\varphi$};
 	% Beschriftung Pmech
 	\path[name path=pmech] (pIN) -- +(0,-20);
 	\path[name intersections={of= pmech and leistungslinie, name=intersPmech}] (intersPmech-1) coordinate (pPmech);
@@ -116,7 +119,7 @@
   	%Senkrechte von PA herunter
   	\path[name path=pVRotor] (pPa) -- +(0,-20);
 	\path[name intersections={of= pVRotor and momentlinie, name=intersPVRotor}] (intersPVRotor-1) coordinate (pPVRotor);
-	\draw [<->] (pPa) -- (pPVRotor) node[midway, right] {Stromwärmeverlust Rotor};
+	\draw [<->] (pPa) -- (pPVRotor) node[midway, right] {Stromwärmeverlust Rotor} node[midway, right=1.2cm, below=0.7] {Anlaufmoment} ;
   	%Senkrechte von PA herunter Teil 2
   	\path[name path=pVStator] (pPVRotor) -- +(0,-20);
 	\path[name intersections={of= pVStator and eisenverlustlinie, name=intersPVStator}] (intersPVStator-1) coordinate (pPVStator);
