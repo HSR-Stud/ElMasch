@@ -23,11 +23,12 @@
 
     
     \subsection{Grundgleichungen}
-    \begin{tabular}[c]{ | p{6cm} | p{9cm} |}
+    \begin{minipage}{15.1cm}
+    \begin{tabular}[c]{ | p{6cm} | p{8cm} |}
     	\hline
-    	Umfangsgeschwindigkeit & $v_u=\omega\cdot R = 2\pi\cdot n \cdot
+    	Umfangsgeschwindigkeit & v$_u=\omega\cdot R = 2\pi\cdot n \cdot
     	R=\frac{2\pi\cdot f \cdot R}{p}=2\cdot f \cdot \tau_p = d\cdot\pi\cdot n$\\
-    	 & Geometrisch: $v=d\cdot\pi\cdot f$\\
+    	 & Geometrisch: v$=d\cdot\pi\cdot f$\\
     	\hline
     	Teilspannung eines Leiters & $U_{iL}=2\cdot \tau_p \cdot f \cdot l \cdot
     	B_m= 2\cdot f\cdot \Phi = 2\cdot p \cdot n \cdot \Phi$\\
@@ -40,7 +41,7 @@
     	Erregerspannung & $U_e=R_e\cdot I_e + L_e\frac{dI_e}{dt}$\\
     	\hline
     	Induzierte Spannung & $U_i = k_1\cdot \Phi \cdot \omega_{mech} = B\cdot l
-    	\cdot v \quad k_1 = Maschinenkonstante$\\
+    	\cdot $v$ \quad k_1 = Maschinenkonstante$\\
     	\hline
     	Elektrisch verursachtes Drehmoment & $M_{el}=M_{Welle}+M_{Reibung}+J\cdot\frac{d\omega_{mech}}{dt}=k_1\cdot
     	\Phi\cdot I_a$\\
@@ -59,6 +60,28 @@
     	Nenndrehmoment $M_{N}$ & $\frac{P_{Mech}}{2 \cdot \pi n_{0}}$ \qquad Vorsicht $n_0$ nicht in $min^{-1}$!! \\ \hline
     	Ankerwiderstand $R_{A}$ & $R_{A} = \frac{U_{N} - U_{iN}}{I_{N}} $ \qquad $U_{iN} =$ Induzierte Spannung \\ \hline
     \end{tabular}
+    \end{minipage}
+    \begin{minipage}{5cm}
+    \begin{tabular}{|p{4cm}|}
+    \hline
+	$U_I = U_{Ind} =$ Induzierte Spannung \\
+	\hline
+	$U_A =$ Ankerspannung\\
+	\hline
+	$U_E =$ Erregerspannung \\
+	\hline
+	$k_1 , k_2 =$ Maschinenkonstanten \\
+	\hline
+	$P_{Luft} = P_{Mech} =$ Mechanische Leistung \\
+	\hline
+	$n_0$ oder $n_{N0} =$ Leerlaufdrehzahl \\
+	\hline
+	$n_N =$ Nenndrehzahl \\
+	\hline
+	
+	
+	\end{tabular}
+	\end{minipage}
     
     	
     
@@ -66,7 +89,7 @@
     	Nebenschlussmaschinen am starren Netz unterscheiden sich im Betriebsverhalten nicht von fremderregten Maschinen.
     	
     	
-        \renewcommand{\arraystretch}{2}
+        \renewcommand{\arraystretch}{1.5}
         \begin{tabular}[c]{ | p{6cm} | p{11cm} |}
             \hline
             Drehzahl &
@@ -76,16 +99,13 @@
             \hline
             Drehmoment &
             $M=\frac{k_2 \cdot \Phi \cdot U_{Anker}}{R_{Anker}} - \frac{k_1 \cdot k_2 \cdot\phi^2 \cdot n}{R_A} =\frac{P_{mech}}{2\pi n_N}=\frac{U_{iN}I_N}{2\pi n_N}\sim I_E \cdot U_A - I_E ^2 \cdot n$
-            \quad Achtung: $[n] = min^{-1}$\\
+            \quad Achtung: $[n] = s^{-1}$\\
             \hline
             Leistung &
             $P_{Anker}= U_i \cdot I \pm I^2 \cdot R_A $(+ bei Motor; - bei Generator) \\
             \hline
             Anlaufmoment &
             $M_A = \frac{k_1 \cdot \Phi \cdot U}{R_1}$ \\
-            \hline
-            Leerlaufdrehzahl &
-            $n_0 = \frac{U_A}{k_1 \cdot \Phi}$ \\
             \hline
             Magnetischer Fluss des Hauptfeldes & 
             $\Phi=\frac{L_e}{N_e}\cdot\frac{U_a}{R_e+R_v}$\\
@@ -94,7 +114,11 @@
             $\omega_m=\frac{N_e\left(R_E+R_V\right)}{k_1\cdot
             L_e}-\frac{R_a\left(R_e+R_V\right)^2N_e^2}{\left(k_1L_eU_a\right)^2}\cdot
             M_{el}$\\
+            & $n_0 = \frac{U_A}{k_1 \cdot \Phi}$ \\
+            & $n_0 = \frac{n_N \cdot U_{Ind,neu}}{U_{Ind,nenn}}$  wenn Verluste $ \approx$ const. !\\
+            & $n_0$ ist Näherungsweise nicht Abhängig von $U_A$ \\
             \hline
+            
         \end{tabular}
         \renewcommand{\arraystretch}{1.3}
         
