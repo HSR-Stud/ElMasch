@@ -89,6 +89,7 @@ $H = 37.4 \frac{A}{m}, B = 46.5 \mu T $\\
 $\mu_0 = 4 \pi \cdot 10^{-1}$ ($\frac{Tm}{A}$)
 \end{minipage}
 
+\subsubsection{H-Feld im Luftspalt (vereinfachte Herleitung)}
 \begin{minipage}{0.4 \linewidth}
 \includegraphics[width = \linewidth]{./Pics/VL2/magKreis}
 \end{minipage}
@@ -107,7 +108,27 @@ Ein Magnetkreis mit einer stromdurchflossenen Spule erzeugt einen magnetischen F
 \end{minipage}
 
 \subsubsection{Beispiele}
-\includegraphics[width = \linewidth]{./Pics/VL2/magKreisBeispiele}
+\includegraphics[width = 0.8 \linewidth]{./Pics/VL2/magKreisBeispiele}
+
+\subsubsection{H-Feld im Luftspalt (Allgemeine Herleitung)}
+\begin{minipage}{0.4 \linewidth}
+\includegraphics[width = \linewidth]{./Pics/VL2/magKreis}
+\end{minipage}
+\begin{minipage}{0.6 \linewidth}
+Wenn der Magnetkern in der Stättigung ist, lässt sich das H-Feld im Eisen nicht mehr vernachlässigen: \\
+
+$\oint_{(C)} \vec{H} \cdot \vec{dl} = H_{Fe} \cdot l_{Fe} + 2 \cdot \delta \cdot H_{\delta} $ \\
+
+$H_{Fe} \cdot l_{Fe} + 2 \delta \cdot H_{\delta} = I \cdot N$ \\
+
+$\Phi_{\delta} = \Phi_{Fe} \Rightarrow B_{\delta} = B_{Fe}$ \\
+
+$H_{Fe} = \frac{B_{Fe}}{\mu_{Fe}} = \frac{B_{\delta}}{\mu_{Fe}} = \frac{\mu_0}{\mu_{Fe}} \cdot H_{\delta}$\\
+
+$\frac{\mu_0}{\mu_{Fe}} \cdot H_{\delta} \cdot l_{Fe} + 2 \cdot \delta \cdot H_{\delta} = I \cdot N$\\
+
+\textbf{$H_{\delta} = \frac{I \cdot N}{\frac{\mu_0}{\mu_{Fe}}+ 2 \delta}$}
+\end{minipage}
 
 \subsection{Permanentmagnet}
 
@@ -118,13 +139,41 @@ Ein Magnetkreis mit einer stromdurchflossenen Spule erzeugt einen magnetischen F
 Ein Permanentmagnet (Dauermagnet) ist ein Stück eines magnetisierbaren Materials (Eisen, Kobalt, Nickel, Ferrit) welches sein statisches Magnetfeld behält ohne einen elektrischen Stromfluss. \\
 
 Kennwerte der Dauermagnete:
-\begin{description}
-\item{Koerzitivfeldstärke $H_c$} Dieses Magnetfeld muss erzeugt werden um den Dauermagneten vollständig zu entmagnetisieren (B=0)
-\item{Remanenz $B_R$} Das ist die magnetische Flussdichte des Dauermagnets ohne magnetisches Fremdfeld (H=0)
-\end{description}
+\begin{itemize}
+\item \textbf{Koerzitivfeldstärke $H_c$} Dieses Magnetfeld muss erzeugt werden um den Dauermagneten vollständig zu entmagnetisieren (B=0)
+\item \textbf{Remanenz $B_R$} Das ist die magnetische Flussdichte des Dauermagnets ohne magnetisches Fremdfeld (H=0)
+\item $B_m = \mu_m \cdot H_m + B_R , \mu_m = \mu_0$
+\end{itemize}
 
 Die Permanentmagneten ersetzen die Erregerspulen in den elektrischen Maschinen. Damit sind die Materialkosten und die ohmschen Verluste der Erregerspulen eliminiert. 
 \end{minipage}
+
+\subsubsection{Magnetkreis mit einem Dauermagneten (Allg. Herleitung)}
+\begin{minipage}{0.4 \linewidth}
+\includegraphics[width = \linewidth]{./Pics/VL2/permMagnet}
+\end{minipage}
+\begin{minipage}{0.6 \linewidth}
+$\oint_{(C)} \vec{H} \cdot \vec{dl} = H_{Fe} \cdot l_{Fe} + H_{m} \cdot l_{m} + 2 \cdot \delta \cdot H_{\delta} $ \\
+
+$H_{Fe} \cdot l_{Fe} + H_{m} \cdot l_{m} + 2 \cdot \delta \cdot H_{\delta} = I \cdot N$ \\
+
+$B_m = B_\delta = B_{Fe}$ \\
+
+$B_m = \mu_m \cdot H_m + B_R \Rightarrow H_m = \frac{B_m - B_R}{\mu_m}$ \\
+
+$H_m =  \frac{\mu_0 \cdot H_\delta  - B_R}{\mu_m}$\\
+
+$H_{Fe} = \frac{B_{Fe}}{\mu_{Fe}} = \frac{\mu_0}{\mu_{Fe}} \cdot H_\delta$\\
+
+$H_m = \frac{\mu_0 \cdot H_\delta - B_R}{\mu_m}$\\
+
+$H_{Fe} = \frac{B_{Fe}}{\mu_{Fe}} = \frac{\mu_0}{\mu_{Fe}}\cdot H_\delta $ \\
+
+$\frac{\mu_0}{\mu_{Fe}} \cdot H_\delta \cdot l_{Fe} + \frac{\mu_0 \cdot H_\delta - B_R}{\mu_m} \cdot l_m + 2 \cdot \delta \cdot H_\delta = I \cdot N$
+
+$H_\delta = \frac{I \cdot N + \frac{B_R}{\mu_m} \cdot l_m}{\frac{\mu_0}{\mu_{Fe}} \cdot l_{Fe} + \frac{\mu_0}{\mu_m} \cdot l_m + 2 \cdot \delta}$
+\end{minipage}
+
 
 \subsection{Reluktanzkraft}
 \begin{minipage}{0.4 \linewidth}
@@ -139,7 +188,17 @@ In dieser Anordnung lässt sich die Reluktanzkraft so angeben: \\
 
 $F_R  = \mu_0 \frac{N^2 \cdot I^2 \cdot A}{4 \delta^2}$ \\
 
-wobei A die magnetisch wirksame Fläche des Luftspalts ist.
+wobei A die magnetisch wirksame Fläche des Luftspalts ist. \\
+
+Die magnetische Energie:\\
+
+$W_m = \frac{1}{2} \cdot H_\delta \cdot B_\delta \cdot 2 \cdot A_{Fe} \cdot \delta= \mu_0 \cdot \frac{I^2 \cdot N^2}{4 \cdot \delta} \cdot A_{Fe}$ \\ 
+
+wobei $A_{Fe} \cdot \delta$ das Volumen des Luftspalts ist. \\
+
+Die Reluktanzkraft nach der Methode der virtuellen Verrückung: \\
+
+$F_R = - \frac{\eth W_m}{\eth \delta} = \mu_0 \frac{I^2 \cdot N^2}{4 \cdot \delta^2} \cdot A_{Fe}$
 \end{minipage}
 
 \subsection{Zusammenfassung}
