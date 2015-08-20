@@ -49,13 +49,14 @@ Die magnetische Reluktanzkraft ist immer anziehen, d.h. die Reluktanzkraft versu
 \item Die Strangzahl: $m = \frac{Z_S}{Z_S - Z_R} = 2$
 \item Die Schrittzahl: $N_p = \frac{2\cdot \pi}{\alpha_0} = 4$
 \item Die Steuerfrequenz: $f_s = N_p \cdot \frac{n}{60}$ 
+\item Das Drehmoment: $M_M = \frac{1}{2} \frac{L_d-L_q}{a_0} \cdot I^2_1$
 \end{compactitem}
 \end{minipage}
 
 \subsection{Drehmoment}
 \begin{minipage}{0.5 \linewidth}
-\includegraphics[width = \linewidth]{./Pics/VL67/Drehmoment}\\
-\includegraphics[width = \linewidth]{./Pics/VL67/Drehmoment2} \\
+\includegraphics[width = 0.9\linewidth]{./Pics/VL67/Drehmoment}\\
+\includegraphics[width = 0.9\linewidth]{./Pics/VL67/Drehmoment2} \\
 
 Der magnetische Fluss des Motors: \\
 
@@ -82,19 +83,24 @@ Die Induktivität des Statorstrangs (Die Position der d-Achse des Rotor parallel
 $L_d = 2 \cdot N \frac{\Phi_{md}}{I_1} = 2 \cdot N \frac{B_{\delta d} \cdot A_z}{I_1} = \mu_0 \cdot 2 \cdot N \frac{2 \cdot N \cdot I_1 \cdot A_z}{2 \cdot \delta_d \cdot I_1} = \mu_0 \cdot 2 \cdot N^2 \frac{A_Z}{\delta_d}$ \\
 
 wobei $N$ die Windungszahl des Statorstrangs, $A_Z$ die Zahnfläche und $\delta_d$ die Höhe des Luftspalts (bei der d-Position des Rotors relativ zu dem Statorzahn) ist. \\
-
 Die Induktivität des Statorstrangs hängt offenbar von der Rotorposition ab: \\
 
-\includegraphics[width = \linewidth]{./Pics/VL67/Drehmoment3} \\
-\includegraphics[width = \linewidth]{./Pics/VL67/Drehmoment4} \\
+$L_q = \frac{\Psi_{m2}}{I_1} = 2N \frac{\Phi_{m2}}{I_1} = 2 \cdot N \frac{B_{\delta2 \cdot L \cdot w_{zu}}}{I_1} = 2 \cdot N \cdot \mu_0 \frac{2 \cdot N \cdot I_1} \cdot L \cdot w_{zu}{2\delta \cdot I_1} = 2 \cdot \mu_0 N^2 \frac{L\cdot w_zu}{\delta}$ \\
 
-Die Zeitableitung der magnetischen Energie: \\
+Wobei $w_{zu}$ die Breite der Zahnüberlappung in der q-Position ist: \\
 
-$w_m(t) = \frac{1}{2} L(\gamma_r) \cdot i^2(t) \Rightarrow \frac{d}{dt}(\frac{1}{2}\cdot L(\gamma_r)\cdot i^2(t)) = \\
-\frac{1}{2} \cdot \frac{dL}{d\gamma_r}(\gamma_r) \cdot \omega_r \cdot i^2(t) + L \cdot i(t) \cdot \frac{di}{dt}(t)$
+$w_{zu} = w_s - a_0 \cdot \frac{D \cdot \pi}{360^\circ} $ \\
+
+\includegraphics[width = 0.8 \linewidth]{./Pics/VL67/Drehmoment3} \\
+\includegraphics[width = 0.9 \linewidth]{./Pics/VL67/Drehmoment4} \\
 \end{minipage}
 
 \begin{minipage}{0.5 \linewidth}
+Die Zeitableitung der magnetischen Energie: \\
+
+$w_m(t) = \frac{1}{2} L(\gamma_r) \cdot i^2(t) \Rightarrow \frac{d}{dt}(\frac{1}{2}\cdot L(\gamma_r)\cdot i^2(t)) = \\
+\frac{1}{2} \cdot \frac{dL}{d\gamma_r}(\gamma_r) \cdot \omega_r \cdot i^2(t) + L \cdot i(t) \cdot \frac{di}{dt}(t)$ \\
+
 \includegraphics[width = \linewidth]{./Pics/VL67/Drehmoment5}
 \end{minipage}
 \begin{minipage}{0.5 \linewidth}
