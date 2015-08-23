@@ -1,24 +1,15 @@
 # ElMasch - Elektrische Maschinen
 
-Verantwortlich: [Bernhard Grauer](http://github.com/a2er)
+Dieses Repo besteht aus zwei unabhängigen Teilen:
 
-## Prüfung
+Teil 1: ElMasch.tex 
 
-* Testatbedingungen: Teilnahme am Praktikum
-* Erlaubte Unterlagen: max. 4 A4-Blätter Zusammenfassung
-* Erforderliche Werkzeuge: Zirkel, Massstab, Farbstifte, Rechner
+Ist eine Formelsammlung basierend auf dem Stoff, welcher von Herrn Prechtel bis FS14 vermittelt wurde.
 
-(Angaben aus Prüfungsvorbereitung 2011)
+Teil 2: Zusammenfassung.tex
 
+Ist eine Zusammenfassung der Vorlesungsunterlagen von Herrn Smajic. 
+Diese wurde für die Prüfung FS15 erstellt und mit fehlenden Formeln aus Übung und Übungsprüfung ergänzt.
 
-## Plan und Lernziele
- * Die elektrodynamischen Grundgesetze 
- * Allgemeine Merkmale elektrischer Maschinen 
- * Gleichstrommaschinen: 
- * Aufbau und Wirkungsweise, Grundgleichungen, Betriebsverhalten, Klemmenbezeichnungen und Schaltungen 
- * Synchronmaschinen: Bauarten, Funktion, Betriebseigenschaften - und grössen, Sonderbauformen 
- * Drehstrom-Asynchronmaschinen: 
-   Bauarten, Schaltungen, Wirkungsweise, Betriebseigenschaften, Kreisdiagramm 
- * Transversalflussmaschinen: Aufbau und Wirkungsweise, Betriebseigenschaften
-   Linearantriebe
- * Steuerung und Regelung elektrischer Maschinen
+Es besteht keine Garantie auf Vollständigkeit und da es sich um eine Open Book Prüfung handelt,
+wird empfohlen ElMasch.tex ebenfalls mit an die Prüfung zu nehmen.
