@@ -10,9 +10,8 @@
             wird ein Drehstrom erzeugt, welcher auf dem Läufer selbst gleichgerichtet wird. Damit wird dan ein
             konstantes Magnetfeld (Dauermagnet) erzeugt (wie die Innenpolmaschine).
         \end{description}
-
     \subsection{Ersatzschaltbild}
-        %\begin{minipage}{11cm}
+        \begin{minipage}{11cm}
             \abb{images/Ersatz_DSM.png}{8cm}{Ersatzschaltung DSM}    
             Es gibt 2 Unterteilungen: \\
             \begin{description}
@@ -23,24 +22,36 @@
                 Betrieb} gibt der DSM Blindleistung ab. Bei \textbf{Untererregung} oder auch \textbf{induktiven Betrieb}
                 nimmt er auf.
             \end{description}
-        %\end{minipage}
-        %\begin{minipage}{8cm}
-        %    \abb{images/Zeigerdiagram.png}{6cm}{Betriebszustände einer DSM}
-        %\end{minipage}\\
-        \begin{tabular}{lll}
-        	& Übererregung & Untererregung \\
+        \end{minipage}
+        \begin{minipage}{8cm}
+      %      \abb{images/Zeigerdiagram.png}{6cm}{Betriebszustände einer DSM}
+    	  	\subsubsection{Phasenschieber}
+	      	Ein DSG, der im Idealfall nur Blindleistung mit dem Netz austauscht. In der Praxis müssen die Verluste des DSG(Reibung, Ventilation, Stromwärme etc.) entweder vom Netz oder von einer Antriebsmaschine gedeckt werden.
+			Der Phasenschieber kennt folgende Betriebsmodi:
+     		\begin{itemize}
+     			\item \textbf{\emph{übererregt}} $(U_p > U_N)$: der DSG gibt Blindleistung ab, verhält sich also bezüglich seiner Klemmen wie ein Kondensator.
+      			\item \textbf{\emph{untererregt}} $(U_p > U_N)$: der DSG nimmt Blindleistung auf, verhält sich also bezüglich seiner Klemmen wie eine Induktivität.
+      		\end{itemize}
+        \end{minipage}
+        \\ \\ \\  
+        \begin{tabular}{|l|l|l|}
+        \hline
+       	& Übererregung & Untererregung \\ 
+         \hline
         Motor & & \\
         &
         \input{./tikz/DSM/ZeigerMotorUeber.tex} &
         \input{./tikz/DSM/ZeigerMotorUnter.tex}\\
-        Generator & & \\
+        \hline
+         Generator & & \\
         &
-        \input{./tikz/DSM/ZeigerGeneratorUeber.tex} &
-        \input{./tikz/DSM/ZeigerGeneratorUnter.tex}\\
-        \end{tabular}
-     
+         \input{./tikz/DSM/ZeigerGeneratorUeber.tex} &
+         \input{./tikz/DSM/ZeigerGeneratorUnter.tex}\\
+         \hline
+         \end{tabular}
+        \renewcommand{\arraystretch}{1.4}
     \subsection{Allgemeine Formeln}
-    \begin{tabular}[c]{ | p{7cm} | p{8cm} |}
+    \begin{tabular}[c]{ | p{6.5cm} | p{11.5cm} |}
     	\hline
     	Polpaarzahl	& $p$\\
     	\hline
@@ -49,19 +60,22 @@
     	\hline
     	Schlupf $[-]$ & $s=\frac{n_d-n}{n_d}$\\
     	\hline
-    	Strang- bzw. Phasenspannung &
-    	$\underline{U}_{Kl}=\underline{U}_p+\underline{U}_{X_d}$\\
-    	\hline
-    	Spannungsfall über Synchroner Reaktanz & $\underline{U}_{X_d}=jX_d\cdot\underline{I}$\\
+    	Spannungsfall über Synchroner Reaktanz & $\underline{U}_{X_D}=jX_d\cdot\underline{I}$
+    	\\
     	\hline
     	Leerlauferregerstrom für Nennspannung & $I_{E0N}$\\
     	\hline
-    	Lastabhängiger Erregerstrom & $\frac{I_{Eneu}}{I_{Ealt}}=\frac{U_{pneu}}{U_{palt}}$ (im Leerlauf ist $U_p = U_{Kl}$)\\
+    	Lastabhängiger Erregerstrom & $\frac{I_{Eneu}}{I_{Ealt}}=\frac{U_{Pneu}}{U_{Palt}}$(im Leerlauf ist $U_p = U_{Kl}$)\\
+    	\hline
+    	Klemmenspannung & $U_{kl} = \frac{U_N}{\sqrt{3}}$\\
+    	\hline
+    	Strang- bzw. Phasenspannung &
+    	$\underline{U}_{kl}=\underline{U}_p+\underline{U}_{X_D}$\\
     	\hline
     	Polradspannung & $U_p=\sqrt{U_{Kl}^2+X_d^2\cdot I^2+2\cdot U_{Kl}\cdot
     	X_d \cdot I\cdot sin \varphi}$\\
     	\hline
-    	Polradwinkel gem. ESB & $\vartheta = arg(\underline{U}_p)$\\
+    	\multirow{2}{6.5cm}{Elekrischer Lastwinkel oder Polradwinkel  gem. ESB} & $\vartheta = arg(U_p)$ (Winkel zwischen $U_{p}$ und $U_{kl}$)\\ & $|U_P| \cdot sin(\theta) = |U_{XD}| \cdot cos(\Phi)$\\
     	\hline
     	Wirkleistung des DSG & $P_{el}=3\cdot
     	U_{Kl}\cdot\frac{U_p}{X_d}\cdot \sin\vartheta = 3 \cdot U_{Kl} \cdot I \cdot \cos{\varphi}$\\
@@ -70,11 +84,32 @@
     	\hline
     	Antriebsmoment des DSG & $\begin{aligned}
     								M_{Welle} 	&=\frac{3\cdot60}{2\pi\cdot n \cdot
-    								    				\eta}\cdot U_{Kl}\cdot\frac{U_p}{X_d}\cdot\sin\vartheta\\
+    								    				\eta}\cdot U_{Kl}\cdot\frac{U_p}{X_d}\cdot\sin\vartheta
     								    		&= \frac{3\cdot60}{2\pi\cdot n \cdot
-    								    	    	\eta}\cdot U_{Kl}\cdot I \cdot \cos{\varphi}= \frac{P_{mech}}{\omega}
+    								    	    	\eta}\cdot U_{Kl}\cdot I \cdot \cos{\varphi}= \frac{P_{mech}}{\omega} \\
+    								    	    &= \frac{\sqrt{3} \cdot U_N \cdot I_N \cdot cos\varphi_N \cdot p}{\eta \cdot 2 \cdot \pi \cdot f_N} 
     								\end{aligned}$\\
     	\hline
+    \end{tabular}
+    
+    \subsection{Inselnetz}
+    \begin{tabular}{|p{7cm}|p{11cm}|}
+    		\hline
+        	Netzstrom Generator & Verbraucherstrom vom Netz mit Immaginiärteil negiert !\\  
+        	\hline
+        	Zuleitungstrom Generator & Netzstrom mit Winkel $+ 180$\textdegree \\
+        	\hline
+        	Verbraucher induktiv & Generator kapazitiv $=$ übererregt \\
+        	Verbraucher kapazitiv & Generator induktiv $=$ untererregt \\
+        	\hline
+        	Polradspannung & $\underline{U}_p = \underline{U}_{kl} - \underline{U}_{XD} $ \\
+        	\hline
+        	Polradspannung im Inselnetz & $U_p=\sqrt{U_{Kl}^2+X_d^2} $\\
+        	\hline
+        	Klemmenspannung & Y = 230V $\Delta$ = 400V \\
+        	\hline
+        	Klemmenspannung nach Lastabwurf & $U_{Kl} = \sqrt{3} \cdot U_p $\\
+        	\hline
     \end{tabular}
 
     \subsection{Betriebsverhalten}
@@ -138,4 +173,3 @@
         \end{minipage}
         \\ \\ \\
         $$ U_P = \sqrt{\frac{U^2_{Netz}}{3} + X_d^2 \cdot I^2 + 2 \cdot \frac{U_{Netz}}{\sqrt{3}}\cdot X_d \cdot I \cdot \sin(\varphi)} $$
-        \newpage

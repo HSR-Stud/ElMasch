@@ -1,0 +1,31 @@
+% Dokumentinformationen
+\title{ElMasch - Zusammenfassung}
+\author{Gregor Dengler}
+\documentclass[10pt,twoside,a4paper,fleqn]{article}
+
+% Header
+\usepackage{paralist}
+\include{header/zusammenfassung}
+
+
+% Document
+\begin{document}
+\setcounter{tocdepth}{2} 	%Es wird nur bis Subsection im Inhaltsverzeinichs angezeigt
+\tableofcontents 				%Inhaltsverzeichnis
+\newpage
+\section{Die elektrodynamischen Grundgesetze}
+\input{sections/VL1-eldynGrundgesetzte}
+\section{Magnetkreis-Begriff, Permanentmagnet, Reluktanzkraft}
+\input{sections/VL2-Magnet}
+\section{Gleichstrommaschine (GSM)}
+\input{sections/VL45-GSM}
+\section{Schrittmotor}
+\input{sections/VL67-Schrittmotor}
+\section{Dreiphasenwechselstrom-Drehfelderzeugung}
+\input{sections/VL89-Drehfeld}
+\section{Synchronmaschine}
+\input{sections/VL1011-Synchronmaschine}
+\section{Asynchronmaschine}
+\input{sections/VL1213-Asynchronmaschine}
+
+\end{document}

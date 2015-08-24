@@ -4,4 +4,6 @@
 *.out
 *.aux
 *.log
-
+*.dvi
+*.toc
+Zusammenfassung.pdf

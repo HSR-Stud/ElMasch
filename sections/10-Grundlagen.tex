@@ -1,6 +1,6 @@
 \section{Generelle Eigenschaften el. Maschinen}
     \subsection{Generelle Formeln von el. Maschinen}
-        \renewcommand{\arraystretch}{1.8}
+        \renewcommand{\arraystretch}{1.4}
         \begin{tabular}[c]{ | p{5cm} | p{8cm} | p{4cm} | }
             \hline
             \textbf{Name} &
@@ -18,21 +18,25 @@
             Lorentzkraft &
             $\vec{F} = Q (\vec{v} \times \vec{B})=I(\vec{l}\times \vec{B}) \hspace{1cm} |\vec{F}| = Q \cdot v \cdot B \cdot \sin\alpha$ &
             $N$ \\
+            Lorentzkraft wenn Leiter Senkrecht zum Feld & $ F = Q(l \cdot B) = I(l \cdot B) $& \\
             Ampèresches Gesetz &
             $F=\frac{Q_2 \cdot v_2 \cdot Q_1 \cdot v_1 \cdot \mu}{r^2 \cdot 4\pi}$ &
             \\
             \hline
             Drehmoment von Schleifen &
             $M_{max} = 2 \cdot F \cdot \frac{d}{2}= F \cdot d = N \cdot B \cdot I \cdot d \cdot l = \frac{P_{Mech}}{2 \pi n_0} $ &
-            Nm; $n_0= Drehzahl$ \\
+            Nm; $n_0= $Drehzahl Vorsicht $n_0$ nicht in $min^-1$ \\
             \hline
             \textbf{3-Finger-Regel:} (rechte Hand) &
             $F$ = Daumen, $v$ = Zeigefinger, $B$ = Mittelfinger &
             Bei $Q < 0$ wechselt Richtung von B! \\
             \hline
-            Magnetische Feldstärke &
-            $\vec{H} = \frac{ \vec{B}}{\mu }$ &
+            Magnetische Feldstärke & 
+            $\vec{H} = \frac{ \vec{B}}{\mu }$   &
             $\frac{A}{m}$ \\
+            H - Gerader Leiter & $ H = \frac{I}{2 \pi \cdot r}$ \qquad r = Abstand zum Leiter& \\ 
+            H - Stromdurchflossener Ring & $ H =  \frac{I \cdot r^2}{2(x^2+r^2)^{\frac{3}{2}}}$ \qquad r = Radius &  \\
+            H - Zylinderspuhle & $ H = \frac{I \cdot N}{\sqrt{l^2 + D^2}}$ \quad D = Durchmesser , l = Längespuhle & \\
             Magnetische Spannung &
             $V_{mAB} = \int\limits \vec{H}(s) \cdot \vec{ds}$ ($V_m$ ist abhängig vom Weg) &
             $A$ \\
@@ -41,6 +45,7 @@
             $\Theta = \oint\vec{H} \cdot \vec{ds} = \sum\limits_{x=1}^n H_x \cdot l_x = \int\limits \vec{J} \cdot \vec{dA} \vee \underbrace{\sum I_k}_{= N I} = V_m$ &
             $A$ \\
             \hline
+            Durchflutungsgesetz 2 & $\Theta = H_L \cdot l_L = \frac{B_L}{\muup} \cdot 2 \cdot \deltaup $ & \\ \hline
             Magnetischer Fluss &
             $\Phi = \int \vec{B} \vec{dA}$ &
             $Vs = Wb$ (Weber) \\
@@ -93,15 +98,15 @@
             \hline
             Spannung &
             \renewcommand{\arraystretch}{1}
-            $U = L \cdot \frac{di}{dt}= \frac{z}{2\cdot A} \cdot B \cdot l \cdot v$ \quad 
+            $U = L \cdot \frac{di}{dt}= \frac{z}{2\cdot A} \cdot B \cdot l \cdot $v \quad 
             \begin{array}[t]{ll}
-                z & Anz. EL \\
+                z & Anz. Leiter in Serie \\
                 A & Anz. paralleller L.
             \end{array}
             \renewcommand{\arraystretch}{1.8}
             &
             V \\
-            \hline
+            & v $= \pi \cdot N \cdot d $ & Achtung N in $\frac{1}{s^-1}$ \\ \hline
             Wirkungsgrad &
             $\eta = \frac{P_2}{P_1}=\frac{abgegebene P}{aufgenommene P}= \frac{P_1 - P_Verluste}{P_1}$ &
             - \\
@@ -111,7 +116,7 @@
             \\
             \hline
         \end{tabular}
-        \renewcommand{\arraystretch}{1.5}	
+        \renewcommand{\arraystretch}{1.4}	
         
         \subsection{Übersicht über die Motorenarten}
         \abb{images/uebersicht_el.png}{11cm}{}
